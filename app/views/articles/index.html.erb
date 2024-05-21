@@ -1,0 +1,11 @@
+<h1>This is your Index page!</h1>
+
+<% @articles.each do |article| %>
+  <div class="article">
+    <h5><%= article.title %></h5>
+    <p><%= article.content %></p>
+    <%= link_to "See more info", article_path(article.id) %>
+  </div>
+  <%end%>
+
+  <%= link_to "Create New Article", new_article_path %>
